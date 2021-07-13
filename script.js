@@ -9,12 +9,4 @@ function displayDay () {
 
 displayDay();
 
-
-
-
-
- 
-
-
- 
- 
+   

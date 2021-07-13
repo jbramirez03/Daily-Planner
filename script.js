@@ -9,4 +9,10 @@ function displayDay () {
 
 displayDay();
 
-   
+   function checkTime () {
+       hourToday = moment().hour();
+
+       $(".time-block").each(function () {
+
+       });
+   }

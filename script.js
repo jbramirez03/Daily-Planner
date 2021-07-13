@@ -34,7 +34,30 @@ function firstRow () {
     }
 
     var savedEvent = localStorage.getItem("events");
+    var eventsArr;
+
+    if (savedEvent === null) {
+        eventsArr = [];
+    } else {
+        eventsArr = JSON.parse(savedEvent);
+    }
+
+    eventsArr.push(savedEvent);
+
+    eventsArrString = JSON.stringify(eventsArr);
+    localStorage.setItem("events", eventsArrString);
+ }
+
+ function gettingItems (row) {
+     savedEvent = localStorage.getItem("events");
+
+     if (savedEvent === null) {
+         return;
+     }
 
 
+     var storedEvents = JSON.parse(savedEvent);
+
+     var textBox = row.children("textarea").text()
  }
  

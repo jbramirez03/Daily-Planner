@@ -13,6 +13,11 @@ displayDay();
        hourToday = moment().hour();
 
        $(".time-block").each(function () {
+        individualHour = parseInt($(this).attr("id").split("hour")[1]);
 
-       });
+        console.log(hourToday, individualHour);
+       })
    }
+
+   checkTime();
+

@@ -21,8 +21,14 @@ displayDay();
             $(this).children("textarea").addClass("past");
             $(this).children("textarea").removeClass("present");
             $(this).children("textarea").removeClass("future");
-
-
+        } else if (individualHour > hourToday) {
+            $(this).children("textarea").addClass("future");
+            $(this).children("textarea").removeClass("past");
+            $(this).children("textarea").removeClass("present");
+        } else {
+            $(this).children("textarea").removeClass("future");
+            $(this).children("textarea").removeClass("past");
+            $(this).children("textarea").addClass("present");
         }
 
        })

@@ -38,11 +38,12 @@ displayDay();
 
    checkTime();
 
-   $(".savenBtn").on("click", function () {
+   $(".saveBtn").on("click", function () {
        var textBox = $(this).siblings(".text-box").val();
        var hour = $(this).parent().attr("id");
 
        localStorage.setItem(hour, textBox);
+       console.log($(this).siblings(".text-box").val());
    })
 
-   
+   $("#hour9 .text-box").val(localStorage.getItem("hour9"));

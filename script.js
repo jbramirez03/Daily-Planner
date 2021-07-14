@@ -40,12 +40,14 @@ displayDay();
 
    $(".saveBtn").on("click", function () {
        $(this).siblings("textarea").addClass("highlighter");
+       $(this).siblings("p").addClass("hour-block-animation");
        var textBox = $(this).siblings(".text-box").val();
        var hour = $(this).parent().attr("id");
 
        localStorage.setItem(hour, textBox);
        console.log($(this).siblings(".text-box").val());
-       setTimeout(()=> {$(this).siblings("textarea").removeClass("highlighter");}, 3000)
+       setTimeout(()=> {$(this).siblings("textarea").removeClass("highlighter");}, 3000);
+       setTimeout(()=> {$(this).siblings("p").removeClass("hour-block-animation");}, 3000)
    })
 
    $("#hour9 .text-box").val(localStorage.getItem("hour9"));

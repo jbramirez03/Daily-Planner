@@ -2,6 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: beige;
 }
 
 textarea {
@@ -37,7 +38,7 @@ textarea {
 }
 
 .hour {
-  background-color: #ffffff;
+  background-color: beige;
   color: #000000;
   border-top: 1px dashed #000000;
 }
@@ -70,4 +71,13 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
+
+.highlighter {
+  animation: fadeoutBg 3s;
+}
+
+@keyframes fadeoutBg {
+  from { background-color: green; }
+  to { background-color: #7df759; }
+}
 

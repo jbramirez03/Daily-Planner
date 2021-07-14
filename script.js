@@ -47,3 +47,11 @@ displayDay();
    })
 
    $("#hour9 .text-box").val(localStorage.getItem("hour9"));
+   $("#hour10 .text-box").val(localStorage.getItem("hour10"));
+   $("#hour11 .text-box").val(localStorage.getItem("hour11"));
+   $("#hour12 .text-box").val(localStorage.getItem("hour12"));
+   $("#hour13 .text-box").val(localStorage.getItem("hour13"));
+   $("#hour14 .text-box").val(localStorage.getItem("hour14"));
+   $("#hour15 .text-box").val(localStorage.getItem("hour15"));
+   $("#hour16 .text-box").val(localStorage.getItem("hour16"));
+   $("#hour17 .text-box").val(localStorage.getItem("hour17"));

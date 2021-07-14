@@ -1,6 +1,6 @@
 var currentDay = $("#currentDay");
 
-
+var allTextareas = $(".text-box");
 
 
 function displayDay () {

@@ -84,3 +84,32 @@ textarea {
   to { background-color: #7df759; }
 }
 
+@-moz-keyframes fadeoutBg { 
+  from { background-color: green; }
+  to { background-color: #7df759; }
+}
+
+@-webkit-keyframes fadeoutBg { 
+  from { background-color: green; }
+  to { background-color: #7df759; }
+}
+
+@-o-keyframes fadeoutBg { 
+  from { background-color: green; }
+  to { background-color: #7df759; }
+}
+
+.bg-color {
+  background-color: aqua;
+}
+.hour-block-animation {
+  animation-name: spectrum;
+  animation-duration: 3s;
+}
+
+@keyframes spectrum {
+  0%   {color: rgb(11, 63, 4);}
+  25%  {color: rgb(31, 122, 12);}
+  50%  {color: rgb(53, 173, 89);}
+  100% {color: rgb(119, 219, 135);}
+}

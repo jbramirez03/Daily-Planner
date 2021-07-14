@@ -41,4 +41,8 @@ displayDay();
    $(".savenBtn").on("click", function () {
        var textBox = $(this).siblings(".text-box").val();
        var hour = $(this).parent().attr("id");
+
+       localStorage.setItem(hour, textBox);
    })
+
+   

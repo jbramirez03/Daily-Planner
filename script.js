@@ -10,8 +10,8 @@ function displayDay () {
 displayDay();
 
    function checkTime () {
-    //    hourToday = moment().hour();
-    hourToday = 12;
+       hourToday = moment().hour();
+    // hourToday = 12;
 
        $(".time-block").each(function () {
         individualHour = parseInt($(this).attr("id").split("hour")[1]);
@@ -33,6 +33,7 @@ displayDay();
         }
 
        })
+    //    checkTime();
    }
 
    checkTime();

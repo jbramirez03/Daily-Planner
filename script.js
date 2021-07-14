@@ -39,11 +39,13 @@ displayDay();
    checkTime();
 
    $(".saveBtn").on("click", function () {
+       $(this).siblings("textarea").addClass("highlighter");
        var textBox = $(this).siblings(".text-box").val();
        var hour = $(this).parent().attr("id");
 
        localStorage.setItem(hour, textBox);
        console.log($(this).siblings(".text-box").val());
+       setTimeout(()=> {$(this).siblings("textarea").removeClass("highlighter");}, 3000)
    })
 
    $("#hour9 .text-box").val(localStorage.getItem("hour9"));
@@ -55,3 +57,5 @@ displayDay();
    $("#hour15 .text-box").val(localStorage.getItem("hour15"));
    $("#hour16 .text-box").val(localStorage.getItem("hour16"));
    $("#hour17 .text-box").val(localStorage.getItem("hour17"));
+
+   

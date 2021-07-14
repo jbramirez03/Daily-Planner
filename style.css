@@ -74,6 +74,9 @@ textarea {
 
 .highlighter {
   animation: fadeoutBg 3s;
+  -moz-animation: fadeoutBg 3s;
+  -webkit-animation: fadeoutBg 3s;
+  -o-animation: fadeoutBg 3s;
 }
 
 @keyframes fadeoutBg {

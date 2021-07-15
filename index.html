@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- linking stylesheets 'bootstrap', 'google-fonts', 'css' -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -23,19 +24,21 @@
   </head>
 
   <body>
+    <!-- header that displays current day and month -->
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <!-- Timeblocks go here -->
+      <!-- Timeblocks for saving events-->
       <div id="hour9" class="row time-block">
         <p class="hour d-flex col-lg-1 align-items-center justify-content-end">9 AM</p>
         <textarea class="col-lg-10 text-box"></textarea>
         <button class="saveBtn col-lg-1">💾</button>
 
       </div>
+      <!-- each timeblock has bootstrap styling -->
       <div id="hour10" class="row time-block">
         <p class="hour d-flex col-lg-1 align-items-center justify-content-end">10 AM</p>
         <textarea class="col-lg-10 text-box"></textarea>

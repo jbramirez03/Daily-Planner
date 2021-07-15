@@ -16,7 +16,6 @@ displayDay();
        $(".time-block").each(function () {
         individualHour = parseInt($(this).attr("id").split("hour")[1]);
 
-        console.log(hourToday, individualHour);
 
         if(hourToday > individualHour) {
             $(this).children("textarea").addClass("past");
@@ -45,7 +44,6 @@ displayDay();
        var hour = $(this).parent().attr("id");
 
        localStorage.setItem(hour, textBox);
-       console.log($(this).siblings(".text-box").val());
        setTimeout(()=> {$(this).siblings("textarea").removeClass("highlighter");}, 3000);
        setTimeout(()=> {$(this).siblings("p").removeClass("hour-block-animation");}, 3000)
    })

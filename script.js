@@ -1,22 +1,22 @@
+// selecting elements from html by using class or id name
 var currentDay = $("#currentDay");
-
 var allTextareas = $(".text-box");
 
-
+// function to display current day and month
 function displayDay () {
     currentDay.text(moment().format("dddd, MMM Do"));
 }
 
 displayDay();
 
+// function to change color of text area depending on time of day
    function checkTime () {
        hourToday = moment().hour();
-    // hourToday = 12;
-
+// looping through each timeblock through class name
        $(".time-block").each(function () {
         individualHour = parseInt($(this).attr("id").split("hour")[1]);
 
-
+        // conditional to change class to textarea which includes color change in css
         if(hourToday > individualHour) {
             $(this).children("textarea").addClass("past");
             $(this).children("textarea").removeClass("present");
@@ -32,11 +32,12 @@ displayDay();
         }
 
        })
-    //    checkTime();
    }
 
    checkTime();
 
+//    once save button clicked add class for animation and remove to be able to replay animation
+//    local storage used to save text in text area
    $(".saveBtn").on("click", function () {
        $(this).siblings("textarea").addClass("highlighter");
        $(this).siblings("p").addClass("hour-block-animation");
@@ -48,6 +49,7 @@ displayDay();
        setTimeout(()=> {$(this).siblings("p").removeClass("hour-block-animation");}, 3000)
    })
 
+//    displaying saved text for each time block
    $("#hour9 .text-box").val(localStorage.getItem("hour9"));
    $("#hour10 .text-box").val(localStorage.getItem("hour10"));
    $("#hour11 .text-box").val(localStorage.getItem("hour11"));
